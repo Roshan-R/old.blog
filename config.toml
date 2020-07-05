@@ -27,6 +27,18 @@ paginate     = 10
   # Default theme "light" or "dark"
   defaultTheme = "light"
 
+
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:roshanr2001@gmail.com"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/Roshan-R"
+
+
+
 [taxonomies]
     category = "blog"
     tag      = "tags"
@@ -41,7 +53,7 @@ paginate     = 10
     readOtherPosts = "Read other posts"
 
     [languages.en.params.logo]
-      logoText = "Roshan's Blog"
+      logoText = "/home/rosh"
       logoHomeLink = "/"
     # or
     #
@@ -50,6 +62,6 @@ paginate     = 10
 
   # And you can even create generic menu
   [[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
+    identifier = "posts"
+    name       = "Posts"
     url        = "/posts"
