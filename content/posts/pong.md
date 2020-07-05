@@ -1,17 +1,14 @@
 
 ---
 
-title: "My First Post"
+title: "Writing Pong in TurboC++"
 
 date: 2019-03-26T08:47:11+01:00
 
 draft: true
 
 ---
-# Pong Written in C++
-
 Welcome to my first C++ Project Pong.This is a remake of the classic video game pong by Atari.
-For this project, I'm using TurboC++ as my compiler.
 
 ![image](/pong.png)
 
@@ -19,9 +16,11 @@ For the source file, check out [this](google.com) for the link
 
 ## Heads up
 
-TurboC++ being a really old compiler, so the compiler can only be used to compile 16-bit programs.
+TurboC++ being a really old compiler, can only be used to compile 16-bit programs.
 The .exe file it generates can be run only form DosBox or other
 emulation softwares
+
+This is by no means good code. 
 
 
 ## Explanations
