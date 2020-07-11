@@ -32,6 +32,8 @@ paginate     = 10
     tag      = "tags"
     series   = "series"
 
+staticDir = ["static"]
+
 [languages]
   [languages.en]
     title = "Roshan's Blog"

@@ -16,27 +16,34 @@ If you find yourself in a similar situation,
 try using these steps.
 
 
-### xkill
- If the GUI is still responding, killing programs are really easy. If you are in an X enviornment, use
+## xkill
+
+![xkill.gif](/xkill.GIF)
+
+ If the GUI is still responding, killing programs are really easy. If you are in an X enviornment, open up a terminal and type
 
 ```bash
 xkill
 ```
-
-Most DE gives you a handy shotcut 
+If you are not able to open a terminal, 
+most Operating Systems has a handy shotcut 
 
 ```bash
 Ctrl+Alt+Esc
 ```
 
-When executed, you could see that your cursor has now changed to a skull and crossbones. 
-Hover your cursor to the window to be killed and click it, It'll be instantly killed.
+When executed, the cursor changes to a skull and crossbones or to an X mark.
 
-### TTYs 
+Hover the cursor above the window to be killed and click on it, it will be instantly killed.
 
-If you're GUI is not working, the next best methord id to log into a tty.
+## TTYs 
 
-what are tty's? 
+![tty.gif](/tty.GIF)
+
+If your GUI is not working, the next best methord is to log into a tty and kill
+the application form there.
+
+What are tty's? 
 check out [this](http://www.linusakesson.net/programming/tty/index.php) article to get a better understanding of them.
 
 To log into one, use the shortcut 
@@ -45,18 +52,19 @@ To log into one, use the shortcut
 Ctrl+Alt+F2
 ```
 
-while there, you'll be greeted with a login screen.
+While there, you'll be greeted with a login screen.
 Enter your username and passsword.
 After you get into it, you'll get a shell to work with.
 You could execute all the commands you do in a terminal emulator here.
 
 Now, use a command line process manager like top or htop and send a sigterm to kill the process which is hanging up your system.
 
-### The holy Kernel
+![htop.gif](/htop.gif)
+
+## The holy Kernel
 
 If all else fails, you could directly talk to the Linux Kernel from your keyboard.
 
-Here, the SysRq key is the same as the PrintScreen Key.
 
 For terminating all processes, use 
 
@@ -64,7 +72,9 @@ For terminating all processes, use
 Alt+SysRq+E
 ```
 
-For terminating all processes, use 
+The SysRq key is the same as the PrintScreen Key.
+
+For Rebooting the system, use
 
 ```bash
 Alt+SysRq+B
@@ -100,7 +110,7 @@ Here is a list of some usefull commands :
 |
 |F 	|OOM |Kill 	Calls oom_kill to kill a memory hog process|
 
-for an extensive list of these SysReq functions, check out [this](https://en.wikipedia.org/wiki/Magic_SysRq_key) 
+For an extensive list of these SysReq functions, check out [this](https://en.wikipedia.org/wiki/Magic_SysRq_key) 
 wikipedia article.
 
 Most distributions disable the access to some of SysRq functions via 
@@ -111,6 +121,8 @@ command in your terminal.
 
 ```bash
 cat /proc/sys/kernel/sysrq
+
+16
 ```
 
 A number would be displayed to the console.
@@ -133,16 +145,18 @@ But be very carefull if you decide to enable it.
 
 To change the SysReq value, first deicide on which value to 
 change it to.
-For this example, I'm using the the value 128
+For this example, I'm using the the value 4
 
 ```bash
-sudo echo 128 > /proc/sys/kernel/sysrq 
+sudo echo 4 > /proc/sys/kernel/sysrq 
 ```
 
 To check if the changes are saved, run the cat command again
 
 ```bash
 cat /proc/sys/kernel/sysrq
+
+4
 ```
 
 You should get the value you supplied earlier.
@@ -150,6 +164,13 @@ You should get the value you supplied earlier.
 ### Conclusion
 
 Thanks for sticking around till the end!
+If you liked this read, share it to your friends.
+
+### References
+
+1.<https://linuxconfig.org/how-to-enable-all-sysrq-functions-on-linux>
+2.<https://sites.google.com/site/syscookbook/rhel/rhel-sysrq-key>
+3.<https://en.wikibooks.org/wiki/Linux_Guide/Freezes>
 
 
 
