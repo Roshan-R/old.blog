@@ -18,7 +18,6 @@ try using these steps.
 
 ## xkill
 
-![xkill.gif](/xkill.GIF)
 
  If the GUI is still responding, killing programs are really easy. If you are in an X enviornment, open up a terminal and type
 
@@ -36,9 +35,10 @@ When executed, the cursor changes to a skull and crossbones or to an X mark.
 
 Hover the cursor above the window to be killed and click on it, it will be instantly killed.
 
+![xkill.gif](/xkill.GIF)
+
 ## TTYs 
 
-![tty.gif](/tty.GIF)
 
 If your GUI is not working, the next best methord is to log into a tty and kill
 the application form there.
@@ -54,6 +54,9 @@ Ctrl+Alt+F2
 
 While there, you'll be greeted with a login screen.
 Enter your username and passsword.
+
+![tty.gif](/tty.GIF)
+
 After you get into it, you'll get a shell to work with.
 You could execute all the commands you do in a terminal emulator here.
 
